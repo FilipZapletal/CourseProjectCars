@@ -39,7 +39,7 @@ function App() {
     getCars();
   }, []);
 
-  //získání aut podle id
+  //získání aut podle idčka
   const filterCars = (ids) => {
     // http://localhost:3000/php_complex/?action=getSpec&ids=5,7,8
     const param = ids.join(); // [5,7,8] = "5,7,8"
