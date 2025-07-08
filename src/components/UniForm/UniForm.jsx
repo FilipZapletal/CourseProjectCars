@@ -2,38 +2,38 @@ import React from 'react'
 
 function UniForm({ id, data, handleNewData, handleUpdate }) {
 
-const handleChange = (event) => {
-    let temp = { ...data };
-    switch (event.target.name) {
-        case `${id}-brand`: { 
-            temp.brand = event.target.value;
-            break;
-         }
+    const handleChange = (event) => {
+        let temp = { ...data };
+        switch (event.target.name) {
+            case `${id}-brand`: {
+                temp.brand = event.target.value;
+                break;
+            }
 
-        case `${id}-model`: {
-            temp.model = event.target.value;
-            break;
-        }
+            case `${id}-model`: {
+                temp.model = event.target.value;
+                break;
+            }
 
-        case `${id}-reg`: {
-            temp.reg = event.target.value;
-            break;
-        }
+            case `${id}-reg`: {
+                temp.reg = event.target.value;
+                break;
+            }
 
-        case `${id}-km`: {
-            temp.km = parseInt(value) || 0;
-            break;
-        }
+            case `${id}-km`: {
+                temp.km = parseInt(value) || 0;
+                break;
+            }
 
-        case `${id}-year`: {
-            temp.year = parseInt(value) || 0;
-            break;
+            case `${id}-year`: {
+                temp.year = parseInt(value) || 0;
+                break;
+            }
+
+            default: break;
         }
-        
-        default: break;
+        handleNewData(temp, id);
     }
-    handleNewData(temp, id);
-}
 
     return (
         <div id={id}>
